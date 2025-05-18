@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MMH4BHP8');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preload" as="video" href="https://i.imgur.com/S4EeBph.mp4" type="video/mp4">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <style>
+        .main-button {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .main-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1AB0E9, #00D4FF, #1AB0E9);
+            background-size: 200% 200%;
+            animation: shinyEffect 3s ease-in-out infinite;
+            z-index: -1;
+            border-radius: 0.25rem;
+        }
+
+        @keyframes shinyEffect {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shake { 
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-1px); }
+            20%, 40%, 60%, 80% { transform: translateX(1px); }
+        }
+
+        .shake-animation {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+            backface-visibility: hidden;
+            perspective: 1000px;
+            transform: translateZ(0); /* Force hardware acceleration */
+            will-change: transform; /* Optimize for animations */
+        }
+
+        @keyframes slideUp {
+            0% { transform: translate(-50%, 100%); }
+            100% { transform: translate(-50%, 0); }
+        }
+
+        @keyframes slideDown {
+            0% { transform: translate(-50%, 0); }
+            100% { transform: translate(-50%, 100%); }
+        }
+
+        #notification {
+            animation: slideUp 0.5s ease-out forwards;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #notification.hiding {
+            animation: slideDown 0.5s ease-in forwards;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(22, 170, 233, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(22, 170, 233, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(22, 170, 233, 0);
+            }
+        }
+
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+
+        /* Add this to your existing styles */
+        video::-webkit-media-controls-start-playback-button,
+        video::-webkit-media-controls-panel {
+            display: none !important;
+            -webkit-appearance: none;
+        }
+        
+        video {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        /* Hide all video controls more aggressively */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+        video::-webkit-media-controls-overlay-play-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+        video::-webkit-media-controls-play-button {
+            display: none !important
+        }
+        video::-webkit-media-controls-panel {
+            display: none !important;
+        }
+    </style>
+</head>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMH4BHP8"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+<body class="relative min-h-screen m-0 flex justify-center bg-black">
+    <div class="max-w-[600px] w-full relative min-h-screen">
+        <!-- Background image - moved up in the DOM and styling changed -->
+        <div class="absolute inset-0 z-[-1] bg-black video-container">
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                disablePictureInPicture 
+                controlsList="nodownload noplaybackrate"
+                class="absolute inset-0 w-full h-full object-cover"
+                id="bgVideo"
+                defaultMuted
+            >
+                <source src="https://i.imgur.com/UnraH4S.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="absolute top-2 right-2 w-12 h-auto z-20">
+            <img src="https://i.imgur.com/1SdeZfJ.png" alt="OnlyFans Logo">
+        </div>
+        <div class="text-center mt-8 relative z-20">
+            <img src="https://i.imgur.com/8t6cFjc.jpeg" alt="Creator" class="mx-auto rounded-full w-32 h-32 object-cover border-4 border-white shadow-sm">
+            <h2 class="text-3xl text-white font-bold mt-4 drop-shadow">Nina 🦋</h2>
+            <p class="text-xl text-white font-bold drop-shadow">@ninavaltez</p>
+            <div class="flex items-center justify-center mt-2">
+                <img src="https://i.imgur.com/b9fGNEp.png" alt="Online now" class="w-4 h-4 mr-1">
+                <span class="text-white text-sm drop-shadow">Online now</span>
+                <img src="https://i.imgur.com/OucV1Zg.png" alt="Separator" class="w-4 h-4 mx-1">
+                <img src="https://i.imgur.com/cjnXH8X.png" alt="Responds in 2 minutes" class="w-4 h-4 mr-1">
+                <span class="text-white text-sm drop-shadow">Responds in 2 minutes</span>
+            </div>
+        </div>
+        <div class="text-center relative z-20 mt-4">
+            <p id="locationMessage" class="text-white mb-3 hidden"> <span id="userCity">your city</span> Boys: I'm not your girl... yet</p>
+            <a href="https://onlyfans.com/ninavaltez" id="messageLink">
+                <button id="messageBtn" class="main-button shake-animation relative bg-[#16aae9] font-bold text-white px-6 py-3 text-lg rounded hover:bg-[#0e8bb8] transition duration-300 flex items-center justify-center mx-auto overflow-hidden">
+                    <img src="https://i.imgur.com/1SdeZfJ.png" alt="OnlyFans Logo" class="w-6 h-6 mr-2 relative z-10">
+                    <span class="relative z-10">I'm single</span>
+                </button>
+            </a> 
+            <div id="countdown" class="text-white font-bold text-xs mt-2">🎁 50% OFF - Ends in 10m 00sec</div>
+        </div>
+
+        <!-- Notification Container -->
+        <div id="notification" class="fixed bottom-4 w-[80%] max-w-[400px] bg-white rounded-lg shadow-lg border-2 border-[#16aae9]/20 text-center py-2 px-3 hidden" style="z-index: 9999;">
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                <span id="notification-text" class="text-gray-700 text-sm"></span>
+            </div>
+        </div>
+
+        <!-- Gradient and Footer Image -->
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent flex items-center justify-center text-white">
+            Linktree <img src="https://i.imgur.com/XEZbTYB.png" alt="Footer Logo" class="w-3 ml-1">
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var countdownTime = 10 * 60; // 10 minutes in seconds
+            var countdownElement = $('#countdown');
+
+            function updateCountdown() {
+                var minutes = Math.floor(countdownTime / 60);
+                var seconds = countdownTime % 60;
+                countdownElement.text(`🎁 50% OFF - Ends in ${minutes}m ${seconds < 10 ? '0' : ''}${seconds}sec`);
+                if (countdownTime > 0) {
+                    countdownTime--;
+                } else {
+                    clearInterval(countdownInterval);
+                }
+            }
+
+            var countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to set the countdown immediately
+
+            // New OnlyFans-related notifications
+            var notifications = [
+                "📸 Nina just posted a new photo",
+                "🎥 Nina is going live soon",
+                "🔥 Alex just subscribed to Nina",
+                "💋 New spicy DM from Nina",
+                "💝 James renewed their subscription",
+                "🌟 New exclusive content uploaded",
+                "💫 Mike became a VIP member",
+                "📱 Nina posted a new story",
+                "💕 Sarah tipped Nina $50"
+            ];
+            var currentNotificationIndex = 0;
+
+            function showNotification() {
+                $('#notification-text').text(notifications[currentNotificationIndex]);
+                $('#notification').removeClass('hiding').show();
+                
+                setTimeout(function() {
+                    $('#notification').addClass('hiding');
+                    
+                    setTimeout(function() {
+                        $('#notification').hide().removeClass('hiding');
+                        currentNotificationIndex = (currentNotificationIndex + 1) % notifications.length;
+                    }, 500);
+                }, 2500);
+            }
+
+            setTimeout(showNotification, 2000);
+            setInterval(showNotification, 12000);
+
+            // Updated location detection using ip-api.com
+            function updateLocation() {
+                $.ajax({
+                    url: 'https://pro.ip-api.com/json?key=kr5OCY2E89HyB70',
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.status === 'success' && response.city) {
+                            $('#userCity').text(response.city);
+                            $('#locationMessage').fadeIn();
+                            console.log('Location found:', response.city);
+                        } else {
+                            $('#userCity').text('your area');
+                            $('#locationMessage').fadeIn();
+                            console.log('No city found in response');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching location:', error);
+                        $('#userCity').text('your area');
+                        $('#locationMessage').fadeIn();
+                    }
+                });
+            }
+
+            updateLocation();
+
+            // Add this new code for shake animation
+            function toggleShake() {
+                const button = $('#messageBtn');
+                // Remove the class first
+                button.removeClass('shake-animation');
+                // Force a reflow before adding the class again
+                void button.get(0).offsetWidth;
+                // Add the class back
+                button.addClass('shake-animation');
+            }
+
+            // Initial delay before first shake
+            setTimeout(() => {
+                // Toggle shake every 4 seconds
+                setInterval(toggleShake, 4000);
+            }, 2000);
+        });
+
+        // Simple version first
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bgVideo');
+            
+            function playVideo() {
+                video.play().catch(function(error) {
+                    console.log("Video play failed:", error);
+                });
+            }
+
+            playVideo();
+            
+            // For iOS
+            document.body.addEventListener('touchstart', function() {
+                playVideo();
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
